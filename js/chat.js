@@ -12,4 +12,11 @@ $(function() {
       hide: true,
     },
   });
+  
+  $('#btnSend').on('click', function() {
+    const input = $('#inputText').val();
+    const _html = `<li>${input}</li>`;
+    $('#msgList').append(_html);
+    mySwiper.scrollbar.updateSize();
+  })
 })
