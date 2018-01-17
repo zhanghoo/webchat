@@ -14,6 +14,7 @@ a:focus, a:hover {
   font-weight: 700;
   color: #fff;
   background-color: #666;
+  z-index: 980;
 }
 .footer-nav {
   position: fixed;
@@ -23,6 +24,7 @@ a:focus, a:hover {
   height: 58px;
   text-align: center;
   border-top: 1px solid #ccc;
+  z-index: 980;
 }
 .nav-row {
   display: flex;
@@ -63,6 +65,7 @@ a:focus, a:hover {
   height: 38px;
   text-align: center;
   border-top: 1px solid #ccc;
+  z-index: 980;
 }
 .input-row {
   display: flex;
