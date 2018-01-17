@@ -1,8 +1,9 @@
 $(function() {
   var mySwiper = new Swiper('.swiper-container',{
     direction: 'vertical',
+    slidesPerView: 'auto',
     freeMode: true,
-    autoHeight: true,
+    mousewheel: true,
     roundLengths: true,
     observer: true,
     observeParents: true,
