@@ -8,6 +8,7 @@
   <title>聊天室</title>
   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.1.0/css/swiper.min.css">
   <link rel="stylesheet" href="./css/webchat.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,21 +19,24 @@
 </head>
 <body>
   <div class="header container-fluid"><span>聊天室</span></div>
-  <div class="main-box container-fluid"></div>
-  <div class="footer-nav">
-    <div class="nav-row input-row">
-      <input class="input-text" type="text"/>
+  <div class="main-box chatroon-box">
+    
+  </div>
+  <div class="footer-input">
+    <div class="input-row">
+      <input id="inputText" class="input-text" type="text"/>
       <div class="input-img">
         <input type="file" accept="image/*" class="imgs"/>
         <span class="icon glyphicon glyphicon-picture"></span>
       </div>
-      <a class="sent">发送</a>
+      <a id="btnSend" class="send">发送</a>
     </div>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/Swiper/4.1.0/js/swiper.min.js"></script>
   <script src="./js/chat.js"></script>
 </body>
 </html>
