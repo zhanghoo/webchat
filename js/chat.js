@@ -18,6 +18,7 @@ Date.prototype.Format = function (fmt) { //author: meizz
 }
 
 $(function() {
+  
   var mySwiper = new Swiper('.swiper-container',{
     direction: 'vertical',
     slidesPerView: 'auto',
@@ -50,8 +51,35 @@ $(function() {
     $('#msgList').append(_html);
     mySwiper.scrollbar.updateSize();
     mySwiper.update(true);
-    console.log(mySwiper.slides.length);
     mySwiper.slideTo(mySwiper.slides.length);
     $('#inputText').val('');
   })
+  
+  var ws = new WebSocket("ws://120.78.133.203:8282");
+  ws.onopen = function(){
+    console.log("握手成功");
+  };
+  ws.onmessage = function(e){
+    console.log("message:" + e.data);
+    const _date = (new Date()).Format("yyyy-MM-dd hh:mm:ss");
+    const _html = `<div class="swiper-slide msg-item">
+                    <div class="msg-box mine">
+                      <div class="avatar"></div>
+                      <div class="msg">
+                        <p class="info">${_date}</p>
+                        <div class="msg-bubble">
+                          <div class="text">${e.data}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>`;
+    $('#msgList').append(_html);
+    mySwiper.scrollbar.updateSize();
+    mySwiper.update(true);
+    mySwiper.slideTo(mySwiper.slides.length);
+  };
+  ws.onerror = function(){
+    console.log("error");
+  };
+  
 })
