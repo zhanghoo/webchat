@@ -2,7 +2,7 @@ $(function() {
   var mySwiper = new Swiper('.swiper-container',{
     direction: 'vertical',
     freeMode: true,
-    autoHeight: true,
+    autoHeight: false,
     roundLengths: true,
     observer: true,
     observeParents: true,
