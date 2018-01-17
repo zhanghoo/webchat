@@ -124,6 +124,7 @@ a:focus, a:hover {
 }
 .msg-box .msg-bubble .text {
   word-break: break-all;
+  overflow: hidden;
 }
 .msg-box.mine .msg-bubble .text {
   text-align: left;
