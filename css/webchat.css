@@ -74,6 +74,33 @@ a:focus, a:hover {
   width: 5px;
   height: 98%;
 }
+.msg-list {
+  margin: 0;
+  padding: 0;
+}
+.msg-item {
+  margin: 0 5px;
+}
+.msg-box {
+  display: flex;
+  position: relative;
+}
+.msg-box .avatar {
+  width: 58px;
+  height: 58px;
+}
+.msg-box .msg {
+  flex: 1;
+}
+.msg-box .info {
+  font-size: 12px;
+  color: #ccc;
+}
+.msg-box .msg-bubble {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
 .footer-input {
   position: fixed;
   bottom: 0;
