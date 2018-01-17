@@ -66,6 +66,14 @@ a:focus, a:hover {
   padding: 0 10px;
   height: auto;
 }
+.chatroom-container .swiper-scrollbar {
+  position: absolute;
+  right: 3px;
+  top: 1%;
+  z-index: 50;
+  width: 5px;
+  height: 98%;
+}
 .footer-input {
   position: fixed;
   bottom: 0;
