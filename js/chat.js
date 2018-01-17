@@ -36,39 +36,39 @@ $(function() {
   
   $('#btnSend').on('click', function() {
     const input = $('#inputText').val();
-    const _date = (new Date()).Format("yyyy-MM-dd hh:mm:ss");
-    const _html = `<div class="swiper-slide msg-item">
-                    <div class="msg-box mine">
-                      <div class="avatar"></div>
-                      <div class="msg">
-                        <p class="info">${_date}</p>
-                        <div class="msg-bubble">
-                          <div class="text">${input}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>`;
-    $('#msgList').append(_html);
-    mySwiper.scrollbar.updateSize();
-    mySwiper.update(true);
-    mySwiper.slideTo(mySwiper.slides.length);
     $('#inputText').val('');
+    ws.send(input);
   })
-  
-  var ws = new WebSocket("wss://120.78.133.203:8282");
+  $(document).keydown(function(e) {
+    if(e.keyCode == 13){
+      const input = $('#inputText').val();
+      $('#inputText').val('');
+      ws.send(input);
+    }
+  });
+  let cliendId = 0;
+  var ws = new WebSocket("ws://120.78.133.203:8282");
   ws.onopen = function(){
     console.log("握手成功");
   };
   ws.onmessage = function(e){
     console.log("message:" + e.data);
+    const data = JSON.parse(e.data);
+    if (data.firstConnect) {
+      // 第一次连接
+      cliendId = data.id;
+      return;
+    }
+    const _mine = data.id === cliendId ? 'mine' : '';
+    const msg = data.message;
     const _date = (new Date()).Format("yyyy-MM-dd hh:mm:ss");
     const _html = `<div class="swiper-slide msg-item">
-                    <div class="msg-box mine">
+                    <div class="msg-box ${_mine}">
                       <div class="avatar"></div>
                       <div class="msg">
                         <p class="info">${_date}</p>
                         <div class="msg-bubble">
-                          <div class="text">${e.data}</div>
+                          <div class="text">${msg}</div>
                         </div>
                       </div>
                     </div>
