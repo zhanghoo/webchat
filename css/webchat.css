@@ -101,6 +101,9 @@ a:focus, a:hover {
   padding: 0 12px;
   max-width: 78%;
 }
+.msg-box.mine .msg {
+  text-align: right;
+}
 .msg-box .info {
   margin: 0;
   font-size: 12px;
@@ -131,6 +134,11 @@ a:focus, a:hover {
   border-color: transparent #ccc transparent transparent;
   z-index: 10;
 }
+.msg-box.mine .msg-bubble:before {
+  left: auto;
+  right: -3px;
+  border-color: transparent transparent transparent #ccc;
+}
 .msg-box .msg-bubble:after {
   content: '';
   display: block;
@@ -145,7 +153,9 @@ a:focus, a:hover {
   z-index: 10;
 }
 .msg-box.mine .msg-bubble:after {
-  border-color: transparent #23527c transparent transparent;
+  left: auto;
+  right: -2px;
+  border-color: transparent transparent transparent #23527c;
 }
 .footer-input {
   position: fixed;
