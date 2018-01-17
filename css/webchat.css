@@ -80,12 +80,15 @@ a:focus, a:hover {
   padding: 0;
 }
 .msg-item {
-  margin: 5px 0;
+  padding: 5px 0;
   list-style: none;
 }
 .msg-box {
   display: flex;
   position: relative;
+}
+.msg-box.mine {
+  flex-direction: row-reverse;
 }
 .msg-box .avatar {
   width: 58px;
@@ -110,6 +113,10 @@ a:focus, a:hover {
   border: 1px solid #ccc;
   background: #fff;
   word-break: break-all;
+}
+.msg-box.mine .msg-bubble {
+  background: #23527c;
+  color: #fff;
 }
 .msg-box .msg-bubble:before {
   content: '';
@@ -136,6 +143,9 @@ a:focus, a:hover {
   border-style: solid;
   border-color: transparent #fff transparent transparent;
   z-index: 10;
+}
+.msg-box.mine .msg-bubble:after {
+  border-color: transparent #23527c transparent transparent;
 }
 .footer-input {
   position: fixed;
