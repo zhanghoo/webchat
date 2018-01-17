@@ -104,6 +104,7 @@ a:focus, a:hover {
   color: #ccc;
 }
 .msg-box .msg-bubble {
+  display: inline-block;
   padding: 8px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -114,15 +115,27 @@ a:focus, a:hover {
   content: '';
   display: block;
   position: absolute;
-  top: 10px;
-  left: -10px
+  top: 28px;
+  left: -3px;
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #ccc transparent transparent;
+  z-index: 10;
 }
 .msg-box .msg-bubble:after {
   content: '';
   display: block;
   position: absolute;
-  top: 10px;
-  left: -10px
+  top: 28px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  z-index: 10;
 }
 .footer-input {
   position: fixed;
