@@ -58,6 +58,10 @@ a:focus, a:hover {
   height: 100%;
   overflow: hidden;
 }
+.chatroom-container {
+  width: 100%;
+  height: 100%;
+}
 .footer-input {
   position: fixed;
   bottom: 0;
