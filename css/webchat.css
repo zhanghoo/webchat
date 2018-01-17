@@ -47,3 +47,50 @@ a:focus, a:hover {
   margin-bottom: 6px;
   font-size: 16px;
 }
+.footer-input {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.input-row {
+  display: flex;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.input-text {
+  flex: 1;
+  width: 100px;
+  height: 26px;
+  border: none;
+  border-bottom: 1px solid #23527c;
+}
+.input-img {
+  position: relative;
+  width: 40px;
+  height: 38px;
+  overflow: hidden;
+}
+.input-img .imgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.input-img .icon {
+  top: 11px;
+  font-size: 16px;
+}
+.send {
+  width: 50px;
+}
