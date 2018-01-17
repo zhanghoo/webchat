@@ -18,5 +18,6 @@ $(function() {
     const _html = `<li>${input}</li>`;
     $('#msgList').append(_html);
     mySwiper.scrollbar.updateSize();
+    $('#inputText').val('');
   })
 })
