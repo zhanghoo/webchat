@@ -36,7 +36,7 @@ $(function() {
   $('#btnSend').on('click', function() {
     const input = $('#inputText').val();
     const _date = (new Date()).Format("yyyy-MM-dd hh:mm:ss");
-    const _html = `<li class="msg-item">
+    const _html = `<div class="swiper-slide msg-item">
                     <div class="msg-box mine">
                       <div class="avatar"></div>
                       <div class="msg">
@@ -46,7 +46,7 @@ $(function() {
                         </div>
                       </div>
                     </div>
-                  </li>`;
+                  </div>`;
     $('#msgList').append(_html);
     mySwiper.scrollbar.updateSize();
     mySwiper.update(true);
