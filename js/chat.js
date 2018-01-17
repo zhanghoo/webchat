@@ -50,6 +50,8 @@ $(function() {
     $('#msgList').append(_html);
     mySwiper.scrollbar.updateSize();
     mySwiper.update(true);
+    console.log(mySwiper.slides.length);
+    mySwiper.slideTo(mySwiper.slides.length);
     $('#inputText').val('');
   })
 })
