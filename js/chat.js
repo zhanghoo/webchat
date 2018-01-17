@@ -29,6 +29,7 @@ $(function() {
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: true,
+      draggable: true,
     },
   });
   
@@ -48,6 +49,7 @@ $(function() {
                   </li>`;
     $('#msgList').append(_html);
     mySwiper.scrollbar.updateSize();
+    mySwiper.update(true);
     $('#inputText').val('');
   })
 })
