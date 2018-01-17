@@ -55,7 +55,7 @@ $(function() {
     $('#inputText').val('');
   })
   
-  var ws = new WebSocket("ws://120.78.133.203:8282");
+  var ws = new WebSocket("wss://120.78.133.203:8282");
   ws.onopen = function(){
     console.log("握手成功");
   };
