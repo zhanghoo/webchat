@@ -40,7 +40,9 @@ $(function() {
                       <div class="avatar"></div>
                       <div class="msg">
                         <p class="info">${_date}</p>
-                        <div class="msg-bubble">${input}</div>
+                        <div class="msg-bubble">
+                          <div class="text">${input}</div>
+                        </div>
                       </div>
                     </div>
                   </li>`;
