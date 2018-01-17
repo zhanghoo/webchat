@@ -104,9 +104,6 @@ a:focus, a:hover {
 .msg-box.mine .msg {
   text-align: right;
 }
-.msg-box.mine .msg .text {
-  text-align: left;
-}
 .msg-box .info {
   margin: 0;
   font-size: 12px;
@@ -124,6 +121,12 @@ a:focus, a:hover {
 .msg-box.mine .msg-bubble {
   background: #23527c;
   color: #fff;
+}
+.msg-box .msg-bubble .text {
+  word-break: break-all;
+}
+.msg-box.mine .msg-bubble .text {
+  text-align: left;
 }
 .msg-box .msg-bubble:before {
   content: '';
