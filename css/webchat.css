@@ -42,5 +42,6 @@ a:focus, a:hover {
   font-size: 12px;
 }
 .nav-item .icon {
-  font-size: 14px;
+  margin-bottom: 6px;
+  font-size: 16px;
 }
